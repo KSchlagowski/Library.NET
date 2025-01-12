@@ -1,0 +1,48 @@
+﻿@model Book
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Dodanie nowej kategorii</h2>
+        </div>
+        
+        <div asp-validation-summary="All"></div>
+
+        <div class="mb-3">
+            <label asp-for="Title">Tytuł</label>
+            <input asp-for="Title" type="text" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Author">Autor</label>
+            <input asp-for="Author" type="text" class="form-control" />
+            <span asp-validation-for="Author" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ISBN">ISBN</label>
+            <input asp-for="ISBN" type="text" class="form-control" />
+            <span asp-validation-for="ISBN" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Category">Kategoria</label>
+            <input asp-for="Category" type="text" class="form-control" />
+            <span asp-validation-for="Category" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Available">Dostępny</label>
+            <input asp-for="Available" type="text" class="form-control" />
+            <span asp-validation-for="Available" class="text-danger"></span>
+        </div>
+        
+        <div class="row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary form-control">Utwórz</button>
+            </div>
+            <div class="col-6">
+                <a asp-controller="Book" asp-action="Index" class="btn btn-secondary form-control">Powrót do listy</a>
+            </div>
+        </div>
+        
+        
+    </div>
+</form>
